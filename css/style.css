@@ -837,41 +837,108 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 /* ============================================
    RESPONSIVE
    ============================================ */
+
+/* ---- Tablet (≤ 1024px) ---- */
 @media (max-width: 1024px) {
-  .packages-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
-  .pkg--premier  { transform: none; }
+  .packages-grid  { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+  .pkg--premier   { transform: none; }
   .pkg--premier:hover { transform: translateY(-6px); }
-  .hero__inner   { max-width: 100%; }
+  .hero__inner    { max-width: 100%; }
   .contact-layout { grid-template-columns: 1fr; }
-  .contact-info  { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-  .footer__top   { grid-template-columns: 1fr 1fr; }
-  .footer__brand { grid-column: 1 / -1; }
-  .team-grid     { grid-template-columns: repeat(2, 1fr); }
+  .contact-info   { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .footer__top    { grid-template-columns: 1fr 1fr; }
+  .footer__brand  { grid-column: 1 / -1; }
+  .team-grid      { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---- Mobile (≤ 768px) ---- */
 @media (max-width: 768px) {
-  :root { --sp: var(--sp-sm); }
+  :root { --sp: 3rem 0; }
 
+  /* Navbar */
   .navbar__links, .navbar__cta { display: none; }
   .navbar__toggle { display: flex; }
+  .navbar__logo img { height: 52px; }
 
+  /* Hero */
+  .hero          { padding: 5.5rem 1.25rem 3.5rem; min-height: 92vh; }
+  .hero__inner img { height: 140px !important; margin-bottom: 1.5rem !important; }
+  .hero h1       { font-size: clamp(1.875rem, 8vw, 2.75rem); margin-bottom: 1.25rem; }
+  .hero__eyebrow { font-size: .7rem; margin-bottom: 1rem; }
+  .hero__sub     { font-size: .9375rem; margin-bottom: 2rem; }
+  .hero__actions { flex-direction: column; align-items: center; gap: .75rem; }
+  .hero__actions .btn { width: 100%; max-width: 340px; }
+
+  /* Page hero */
+  .page-hero     { padding: 6.5rem 1.25rem 3rem; }
+  .page-hero h1  { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+  /* Container */
+  .container { padding: 0 1.25rem; }
+
+  /* Layout stacking */
   .two-col      { grid-template-columns: 1fr; gap: 2rem; }
   .reviews-grid { grid-template-columns: 1fr; }
   .team-grid    { grid-template-columns: 1fr; max-width: 320px; margin-inline: auto; }
   .values-strip { grid-template-columns: 1fr; }
-  .area-grid    { grid-template-columns: repeat(2, 1fr); }
+  .area-grid    { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
   .ba-row       { grid-template-columns: 1fr; }
   .form-row     { grid-template-columns: 1fr; }
   .contact-info { grid-template-columns: 1fr; }
   .footer__top  { grid-template-columns: 1fr; gap: 2rem; }
   .footer__bottom { flex-direction: column; text-align: center; }
+  .footer       { padding: 3.5rem 1.25rem 1.75rem; }
+
+  /* Proof strip */
+  .proof-strip  { padding: 3rem 1.25rem; }
   .proof-strip__inner { flex-direction: column; text-align: center; }
-  .proof-strip__quote { max-width: 100%; }
-  .hero__actions { flex-direction: column; }
-  .hero__actions .btn { width: 100%; }
+  .proof-strip__quote { max-width: 100%; font-size: 1rem; }
+
+  /* CTA banner */
+  .cta-banner   { padding: 3rem 1.25rem; }
+  .cta-banner .btn { display: block; width: 100%; max-width: 320px; margin-inline: auto; }
+
+  /* Packages */
+  .packages-grid { max-width: 100%; }
+  .addons-note  { padding: 1.25rem 1.25rem; }
+
+  /* Form — 16px min to prevent iOS auto-zoom on focus */
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-size: 1rem; padding: .8rem .875rem; }
+  .form-submit  { font-size: .875rem; padding: 1rem; }
+
+  /* Reviews stats — hide vertical dividers */
+  .rating-divider { display: none; }
+
+  /* Misc */
+  .navbar__mobile a { font-size: .8125rem; }
+  .btn { padding: .875rem 1.5rem; }
 }
 
+/* ---- Small mobile (≤ 480px) ---- */
 @media (max-width: 480px) {
-  .area-grid { grid-template-columns: repeat(2, 1fr); }
+  :root { --sp: 2.5rem 0; }
+
+  .hero          { padding: 5rem 1rem 3rem; }
+  .hero__inner img { height: 110px !important; }
+  .hero h1       { font-size: clamp(1.625rem, 7.5vw, 2.25rem); }
+  .hero__actions .btn { max-width: 100%; }
+
+  .navbar__logo img { height: 44px; }
+  .container    { padding: 0 1rem; }
+  .area-grid    { grid-template-columns: repeat(2, 1fr); }
   .packages-grid { max-width: 100%; }
+  .page-hero    { padding: 6rem 1rem 2.5rem; }
+  .contact-layout { gap: 2rem; }
+  .proof-strip  { padding: 2.5rem 1rem; }
+  .cta-banner   { padding: 2.5rem 1rem; }
+  .footer       { padding: 3rem 1rem 1.5rem; }
+  .review-card  { padding: 1.25rem; }
+  .pkg__head    { padding: 1.375rem 1.25rem 1.25rem; }
+  .pkg__body    { padding: 1.25rem; }
+  .inquiry-form { padding: 1.5rem 1.25rem; }
 }
