@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request an Inquiry | Exclusive Detailing</title>
+  <meta name="description" content="Request a detailing inquiry with Exclusive Detailing. Serving Folsom, Rocklin, El Dorado Hills, Roseville, Lincoln, Granite Bay and Sacramento region.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="images/logo-white.png" alt="Exclusive Detailing">
+      </a>
+      <div class="navbar__links">
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="team.html">Our Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn--gold">Get a Quote</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile">
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn--gold">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- ======== PAGE HERO ======== -->
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <p class="eyebrow" style="text-align:center;">Let's Get Started</p>
+      <h1>Request an Inquiry</h1>
+      <div class="gold-divider"></div>
+      <p>Fill out the form below and we'll reach out within 24 hours to confirm availability and answer any questions.</p>
+    </div>
+  </div>
+
+  <!-- ======== FORM SECTION ======== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- FORM -->
+        <div>
+          <!--
+            SETUP INSTRUCTIONS:
+            1. Go to https://formspree.io and sign in with andro.rc06@gmail.com
+            2. Create a new form — Formspree will give you a unique form ID
+            3. Replace YOUR_FORM_ID below with that ID (e.g. xpwzabcd)
+            4. Once your business email (info@exclusivedetailing.com) is ready,
+               update the Formspree form's notification email in your dashboard
+          -->
+          <form
+            id="inquiry-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="inquiry-form"
+          >
+            <div style="margin-bottom:1.75rem;">
+              <p class="eyebrow">Your Information</p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span style="color:#C9A84C;">*</span></label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span style="color:#C9A84C;">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="(916) 555-0100" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:#C9A84C;">*</span></label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Your Location (City or Zip) <span style="color:#C9A84C;">*</span></label>
+              <input type="text" id="location" name="location" placeholder="e.g. El Dorado Hills, 95762" required>
+            </div>
+
+            <div style="margin-top:2rem;margin-bottom:1.75rem;padding-top:1.75rem;border-top:1px solid var(--gray-200);">
+              <p class="eyebrow">About Your Vehicle</p>
+            </div>
+
+            <div class="form-group">
+              <label for="vehicle">Year, Make &amp; Model <span style="color:#C9A84C;">*</span></label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2022 Toyota 4Runner" required>
+            </div>
+
+            <div class="form-group">
+              <label for="package">Package You're Interested In <span style="color:#C9A84C;">*</span></label>
+              <select id="package" name="package" required>
+                <option value="" disabled selected>Select a package…</option>
+                <option value="Essential">Tier 1 — Essential (Starting at $89)</option>
+                <option value="Premier">Tier 2 — Premier (Starting at $149) · Most Popular</option>
+                <option value="Signature">Tier 3 — Signature Detail (Starting at $399)</option>
+                <option value="Not sure">Not sure yet — I'd like a recommendation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Anything Else We Should Know?</label>
+              <textarea id="notes" name="notes" placeholder="Pet hair, heavy soiling, specific concerns, preferred dates — anything that helps us prepare."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--gold form-submit">Submit Inquiry</button>
+            <p class="form-note">We'll never share your information. Response within 24 hours.</p>
+          </form>
+
+          <!-- Success state -->
+          <div id="form-success" class="inquiry-form">
+            <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <h3>Inquiry Received!</h3>
+            <p>Thank you — we'll review your details and reach out within 24 hours to confirm availability and answer any questions. We're looking forward to taking care of your vehicle.</p>
+            <a href="index.html" class="btn btn--navy" style="margin-top:1.75rem;">Back to Home</a>
+          </div>
+        </div>
+
+        <!-- SIDE INFO -->
+        <div class="contact-info">
+          <div class="contact-block">
+            <p class="contact-block__label">Service Area</p>
+            <div class="contact-block__cities">
+              <span>Folsom</span>
+              <span>Rocklin</span>
+              <span>El Dorado Hills</span>
+              <span>Roseville</span>
+              <span>Lincoln</span>
+              <span>Newcastle</span>
+              <span>Granite Bay</span>
+              <span>Sun City Lincoln Hills</span>
+            </div>
+          </div>
+          <div class="contact-block">
+            <p class="contact-block__label">Response Time</p>
+            <p class="contact-block__text">We respond to all inquiries within 24 hours. Weekends included — we're a mobile service, after all.</p>
+          </div>
+          <div class="contact-block">
+            <p class="contact-block__label">Good to Know</p>
+            <p class="contact-block__text">The Signature Detail requires advance booking and is not available same-day. For all other packages, same-day availability may be possible for an additional rush fee.</p>
+          </div>
+          <div class="contact-block">
+            <p class="contact-block__label">What Happens Next</p>
+            <p class="contact-block__text" style="margin-bottom:0;">
+              1. We review your inquiry<br>
+              2. We reach out to confirm availability &amp; walk through the details<br>
+              3. You pick a time that works<br>
+              4. We show up and get to work
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="images/logo-white.png" alt="Exclusive Detailing" class="footer__logo">
+          <p class="footer__tagline">Premium mobile detailing brought directly to your driveway. Sacramento's detail crew — no drop-off, no hassle, no shortcuts.</p>
+        </div>
+        <div>
+          <p class="footer__col-label">Navigation</p>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Client Reviews</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-label">Service Area</p>
+          <p class="footer__cities">Folsom · Rocklin · El Dorado Hills<br>Roseville · Lincoln · Newcastle<br>Granite Bay · Sun City Lincoln Hills</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Exclusive Detailing. All rights reserved.</p>
+        <p class="footer__badge">Sacramento's Premium Mobile Detail Crew</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
